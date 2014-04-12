@@ -1,0 +1,22 @@
+#
+# Standard Makefile For Simplex Channel Example
+#
+
+# TARGET_ARCH = gccAMD64 or X86_64 
+#     
+
+MODULE = demo
+SRCS = channel.cpp  \
+    display.cpp     \
+    packet.cpp      \
+    receiver.cpp    \
+    transmit.cpp    \
+    timer.cpp       \ 
+    channel_main.cpp
+ 
+ # each object file is built from one of the cpp files
+# OBJS = $(SRCS: .cc=.o)   
+OBJS = $(SRCS: .cpp=.o)
+   
+#include Makefile.defs
+

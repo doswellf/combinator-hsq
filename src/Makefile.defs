@@ -1,0 +1,14 @@
+TARGET_ARCH = gccsparcOS5
+CC
+ = g++
+OPT
+ =
+DEBUG = -g
+SYSTEMC = /remote/dtg403/dperry/systemc-2.0
+INCDIR = -I. -I.. -I$(SYSTEMC)/include
+LIBDIR = -L. -L.. -L$(SYSTEMC)/lib-$(TARGET_ARCH)
+CFLAGS = -Wall $(DEBUG) $(OPT) $(INCDIR) $(LIBDIR)
+LIBS
+ = -lsystemc -lm $(EXTRA_LIBS)
+
+ # add the rest of the required macros here
